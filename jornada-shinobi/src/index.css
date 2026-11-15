@@ -9,18 +9,136 @@
   }
 }
 * { box-sizing: border-box; }
+
 html { scroll-behavior: smooth; scroll-padding-top: 70px; }
-body { margin: 0; background: var(--bg); color: var(--ink);
-  font: 17px/1.65 "Atkinson Hyperlegible", system-ui, sans-serif; }
-h1, h2, h3 { font-family: "Bricolage Grotesque", sans-serif; line-height: 1.1; margin: 0; }
+
+body { 
+  margin: 0; 
+  background: var(--bg); 
+  color: var(--ink);
+  font: 17px/1.65 "Atkinson Hyperlegible", system-ui, sans-serif;
+  background-image: url("/assets/konohabg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  }
+
+.navbar {
+  display: flex;
+  width: 100%;
+  min-height: 64px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  background: transparent;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  width: min(1100px, 100%);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* li {
+  text-decoration: none;
+  outline: none;
+  color: #000;
+} */
+
+.nav-link { display: block; padding: 6px 10px; border-radius: 7px; color: var(--acc); font-weight: 700; text-decoration: none; }
+.nav-link:hover { opacity: .78; text-decoration: none; }
+.nav-link.active { font-weight: 900; }
+.nav-link:focus-visible { outline: 2px solid var(--acc); outline-offset: 2px; text-decoration: none; }
+
+h1, h2, h3 { color: var(--acc); font-family: "Bricolage Grotesque", sans-serif; line-height: 1.1; margin: 0; }
+
 section { max-width: 980px; margin: 0 auto; padding: 64px 20px 8px; }
 
-blockquote { border-left: 5px solid var(--acc); margin: 28px 0; padding: 6px 0 6px 16px;
-  font: 700 clamp(20px, 3vw, 26px)/1.3 "Bricolage Grotesque", sans-serif; max-width: 30ch; }
+.home-section { max-width: 1100px; padding: 48px 24px 64px; }
+.home-title { margin-bottom: 28px; }
+.home-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 320px); gap: 32px; align-items: start; }
+.home-intro { display: grid; gap: 16px; }
+.home-quote { margin: 0; padding: 18px 20px; background: var(--surf); border: 1px solid var(--line); border-left: 4px solid var(--acc); border-radius: 0 12px 12px 0; box-shadow: 0 12px 28px rgb(20 33 61 / 7%); }
+.home-quote blockquote { max-width: none; margin: 0 0 10px; padding: 0; border: 0; color: var(--ink); font: 700 clamp(19px, 2.2vw, 23px)/1.3 "Bricolage Grotesque", sans-serif; }
+.home-quote p { margin: 0; color: var(--mut); }
+.profile-infobox { overflow: hidden; background: var(--surf); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 14px 36px rgb(20 33 61 / 10%); }
+.profile-infobox h3 { margin: 0; padding: 12px 16px; text-align: center; font-size: 22px; background: var(--chip); border-bottom: 1px solid var(--line); }
+.profile-infobox figure { margin: 16px 16px 12px; text-align: center; }
+.profile-infobox img { display: block; width: 100%; max-height: 310px; aspect-ratio: 1; object-fit: cover; object-position: center 35%; border: 1px solid var(--line); border-radius: 8px; }
+.profile-infobox figcaption { margin-top: 6px; color: var(--mut); font-size: 14px; }
+.profile-infobox dl { margin: 0; padding: 0 16px 16px; }
+.profile-infobox dl > div { display: grid; grid-template-columns: minmax(90px, .75fr) minmax(0, 1.25fr); gap: 12px; padding: 9px 0; border-top: 1px solid var(--line); }
+.profile-infobox dt { font-size: 14px; font-weight: 700; }
+.profile-infobox dd { margin: 0; color: var(--mut); font-size: 14px; }
 
-  .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); }
+.journey-section { max-width: 1100px; padding: 52px 24px 64px; }
+.journey-heading { max-width: 720px; margin-bottom: 30px; padding: 22px 24px; background: var(--surf); border: 1px solid var(--line); border-radius: 12px; }
+.journey-heading h2 { margin-bottom: 12px; }
+.journey-heading > p:last-child { margin: 0; color: var(--ink); font-size: 18px; }
+.journey-kicker { margin: 0 0 8px; color: var(--acc); font-size: 13px; font-weight: 800; letter-spacing: .12em; }
+.mission-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 18px; margin: 0; padding: 0; list-style: none; }
+.mission-card { height: 100%; padding: 20px; border-left: 4px solid var(--acc); }
+.mission-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.mission-rank { display: inline-block; padding: 4px 10px; border-radius: 999px; background: var(--acc); color: var(--accink); font-size: 12px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.mission-number { color: var(--mut); font: 800 24px/1 "Bricolage Grotesque", sans-serif; opacity: .65; }
+.mission-card h3 { margin-bottom: 6px; }
+.mission-card .mission-focus { margin: 0 0 12px; }
+.mission-highlights { display: grid; gap: 5px; margin: 14px 0; padding-left: 20px; color: var(--mut); font-size: 14.5px; }
+.mission-tools { display: flex; flex-wrap: wrap; gap: 4px; }
+.journey-note { margin: 22px 0 12px; color: var(--mut); font-size: 14px; }
+.journey-home-link { display: inline-block; color: var(--ink); font-weight: 700; text-decoration-color: var(--acc); text-underline-offset: 4px; }
+
+.facets-section { max-width: 1100px; padding: 52px 24px 64px; }
+.facets-heading { max-width: 720px; margin-bottom: 28px; padding: 22px 24px; background: var(--surf); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 28px rgb(20 33 61 / 7%); }
+.facets-heading h2 { margin-bottom: 12px; }
+.facets-heading > p:last-child { margin: 0; color: var(--mut); font-size: 18px; }
+.facets-kicker { margin: 0 0 8px; color: var(--acc); font-size: 13px; font-weight: 800; letter-spacing: .12em; }
+.facet-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.facet-tab { padding: 9px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--surf); color: var(--ink); font: inherit; cursor: pointer; }
+.facet-tab:hover { background: var(--chip); }
+.facet-tab.active { border-color: var(--acc); background: var(--acc); color: var(--accink); font-weight: 700; }
+.facet-tab:focus-visible { outline: 2px solid var(--acc); outline-offset: 2px; }
+.henge-card { min-height: 320px; padding: 24px; background: var(--surf); border: 2px solid var(--acc); border-radius: 14px; }
+.henge-card .henge-label { margin: 0 0 8px; color: var(--acc); font-size: 14px; font-weight: 800; }
+.henge-card h3 { margin: 0 0 18px; font-size: 24px; }
+.henge-card p { margin: 0 0 14px; color: var(--ink); }
+.henge-card p:last-child { margin-bottom: 0; }
+.henge-card strong { color: var(--mut); }
+
+@media (max-width: 760px) {
+  .home-section { padding: 40px 20px; }
+  .home-layout { grid-template-columns: 1fr; gap: 24px; }
+  .profile-infobox { width: 100%; max-width: 420px; justify-self: center; }
+  .journey-section { padding: 40px 20px; }
+  .mission-grid { grid-template-columns: 1fr; }
+  .facets-section { padding: 40px 20px; }
+  .parallel-comparison { grid-template-columns: 1fr; }
+}
+
+blockquote { 
+  border-left: 5px solid var(--acc); 
+  margin: 28px 0; padding: 6px 0 6px 16px;
+  font: 700 clamp(20px, 3vw, 26px)/1.3 "Bricolage Grotesque", sans-serif; 
+  max-width: 30ch; 
+}
+
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); align-items: start; }
+.parallel-grid { grid-auto-rows: 1fr; align-items: stretch; }
 .card { background: var(--surf); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
 .card h3 { font-size: 20px; margin-bottom: 4px; }
+.parallel-card { display: flex; flex-direction: column; justify-content: space-between; height: 150px; }
+.parallel-card h3 { margin-bottom: 12px; }
+.parallel-toggle { cursor: pointer; align-self: flex-start; }
+.parallel-toggle:focus-visible { outline: 2px solid var(--acc); outline-offset: 3px; }
+.parallel-comparison { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 360px); gap: 20px; align-items: center; margin-top: 16px; }
+.parallel-comparison .card_img { height: 220px; margin: 0; object-fit: contain; }
+.parallel-comparison-copy p { margin: 8px 0; }
 .mut { color: var(--mut); margin: 4px 0 8px; font-size: 15.5px; }
 .skill { display: flex; justify-content: space-between; gap: 8px; padding: 6px 0; border-top: 1px solid var(--line); font-size: 15.5px; }
 .skill em { font-style: normal; font-weight: 700; color: var(--acc); white-space: nowrap; }
@@ -31,3 +149,19 @@ blockquote { border-left: 5px solid var(--acc); margin: 28px 0; padding: 6px 0 6
 .rank { float: right; font: 800 22px/1 "Bricolage Grotesque", sans-serif; background: var(--acc); color: var(--accink); border-radius: 8px; padding: 6px 10px; }
 .contact { display: block; text-decoration: none; color: var(--ink); transition: transform .3s; overflow-wrap: anywhere; }
 .contact:hover, .contact:focus-visible { transform: translateY(-6px); }
+.contacts-intro { max-width: 720px; margin-bottom: 24px; padding: 22px 24px; background: var(--surf); border: 1px solid var(--line); border-radius: 12px; }
+.contacts-intro h2 { margin-bottom: 12px; }
+.contacts-intro p { margin: 0; color: var(--ink); font-size: 18px; }
+.contact-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.contact-heading h3 { margin: 0; }
+.contact-icon { flex: 0 0 auto; width: 32px; height: 32px; }
+.contact-icon-github { color: var(--ink); }
+.contact-icon-linkedin { color: #0a66c2; }
+.contact-icon-whatsapp { color: #25d366; }
+.contact-icon-gmail { color: #ea4335; }
+
+.card_img { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin: 8px 0; }
+
+.cover {
+  width: 100%; object-fit: contain;
+}

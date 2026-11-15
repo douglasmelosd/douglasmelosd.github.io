@@ -1,6 +1,9 @@
 import { skillGroups } from '../data';
 
 export default function Skills() {
+
+  
+
   return (
         <section id="habilidades">
             <h2>Habilidades</h2>

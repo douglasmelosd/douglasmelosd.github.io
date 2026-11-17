@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Jornada Shinobi
 
 Portfólio pessoal de **Douglas Melo Silva**, desenvolvedor de IA (IA generativa, agentes e automação), com narrativa inspirada no universo de Naruto. Os rótulos shinobi (Genin, Chunin, Ninjutsu, Rank D a S) são linguagem de apresentação, não equivalência com cargos.
@@ -86,3 +87,6 @@ O projeto usa `BrowserRouter`, que funciona bem na Vercel e na Netlify. Para o G
 - GitHub: [github.com/DouglasMSilva](https://github.com/DouglasMSilva)
 - LinkedIn: [linkedin.com/in/douglas-melo-dev](https://linkedin.com/in/douglas-melo-dev)
 - E-mail: melosilvadouglas7@gmail.com
+=======
+# douglasmelosd.github.io
+>>>>>>> 964bc0cb3ac4b0c6417393daab9db1efe08bd5c7

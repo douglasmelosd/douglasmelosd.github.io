@@ -18,7 +18,9 @@ export default function Journey() {
           <li key={mission.id}>
             <article className="card mission-card">
               <div className="mission-card-header">
-                <span className="mission-rank">Missão {mission.rank}</span>
+                <span className="mission-rank" aria-label={`Rank ${mission.rank}`}>
+                  {mission.rank}
+                </span>
                 <span className="mission-number" aria-label={`Etapa ${index + 1}`}>
                   {String(index + 1).padStart(2, "0")}
                 </span>

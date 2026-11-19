@@ -171,6 +171,7 @@ export const careerMissions: CareerMission[] = [
 export type ProfessionalFacet = {
     id: string,
     role: string,
+    image: string,
     title: string,
     history: string,
     skills: string,
@@ -181,6 +182,7 @@ export const professionalFacets: ProfessionalFacet[] = [
     {
         id: "animator",
         role: "Animador",
+        image: "/assets/Kankuro.webp",
         title: "Animação e narrativa visual",
         history: "Dou movimento e expressão a ideias por meio da animação.",
         skills: "Criatividade, ritmo, percepção de movimento, composição e narrativa visual.",
@@ -189,6 +191,7 @@ export const professionalFacets: ProfessionalFacet[] = [
     {
         id: "communicator",
         role: "Comunicador",
+        image: "/assets/Gaara.jpg",
         title: "Comunicação e troca de ideias",
         history: "Transformo ideias em mensagens que aproximam pessoas e ajudam a compartilhar histórias.",
         skills: "Expressão, escuta, clareza e adaptação da mensagem ao público.",
@@ -197,6 +200,7 @@ export const professionalFacets: ProfessionalFacet[] = [
     {
         id: "writer",
         role: "Escritor",
+        image: "/assets/Jiraiya.jpeg",
         title: "Escrita e produção criativa",
         history: "Atuação como escritor.",
         skills: "Imaginação, construção narrativa, expressão, desenvolvimento de ideias e comunicação escrita.",
@@ -205,6 +209,7 @@ export const professionalFacets: ProfessionalFacet[] = [
     {
         id: "artist",
         role: "Artista",
+        image: "/assets/Sai-Naruto.webp",
         title: "Desenho e expressão artística",
         history: "Exploro ideias e sentimentos por meio do desenho e da criação visual.",
         skills: "Observação, composição, criatividade, experimentação e desenvolvimento de conceitos visuais.",
@@ -212,12 +217,13 @@ export const professionalFacets: ProfessionalFacet[] = [
     },
 ];
 
-export type ContactName = "GitHub" | "LinkedIn" | "WhatsApp" | "E-mail";
+export type ContactName = "GitHub" | "LinkedIn" | "WhatsApp" | "E-mail" | "Microsoft Learn";
 export type Contact = { name: ContactName, description: string, label: string, href: string, external: boolean };
 
 export const contacts: Contact[] = [
-    { name: "GitHub", description: "Técnicas e projetos", label: "github.com/DouglasMSilva", href: "https://github.com/DouglasMSilva", external: true },
-    { name: "LinkedIn", description: "Trajetória e networking", label: "linkedin.com/in/douglas-melo-dev", href: "https://linkedin.com/in/douglas-melo-dev", external: true },
+    { name: "GitHub", description: "Técnicas e projetos", label: "github.com/douglasmelosd", href: "https://github.com/douglasmelosd", external: true },
+    { name: "LinkedIn", description: "Trajetória e networking", label: "linkedin.com/in/douglasmelosd", href: "https://linkedin.com/in/douglasmelosd", external: true },
     { name: "WhatsApp", description: "Conversa direta", label: "+55 21 98363-2055", href: "https://wa.me/5521983632055", external: true },
-    { name: "E-mail", description: "Propostas e recrutamento", label: "melosilvadouglas7@gmail.com", href: "mailto:melosilvadouglas7@gmail.com", external: false },
+    { name: "E-mail", description: "Propostas e recrutamento", label: "douglasmelosd@gmail.com", href: "mailto:douglasmelosd@gmail.com", external: false },
+    { name: "Microsoft Learn", description: "Perfil e conquistas de aprendizado", label: "DouglasMeloSilva-4246 | Microsoft Learn", href: "https://learn.microsoft.com/pt-br/users/douglasmelosilva-4246/", external: true },
 ];

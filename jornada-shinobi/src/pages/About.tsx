@@ -12,9 +12,26 @@ export default function About() {
 
             Na atuação autônoma e no portfólio, desenvolvo aplicações com PyTorch, FastAPI, scikit-learn, LangChain, Ollama, Node.js, Java e React, incluindo modelos de Machine Learning, APIs e um chatbot em desenvolvimento. Com esse repertório, tenho aderência a iniciativas de Data & AI, Power Platform, Modern Work e Software House. 
 
-            Sou bacharel em Ciência da Computação e pós-graduando em Inteligência Artificial. Mantenho 50 repositórios públicos no GitHub e alcancei nível 8, 52.100 XP, 26 selos e 4 troféus no Microsoft Learn.
+            Mantenho 50 repositórios públicos no GitHub e alcancei nível 8, 52.100 XP, 26 selos e 4 troféus no Microsoft Learn.
           </p>
         </article>
+        <div className="grid about-details">
+          <article className="card">
+            <h3>Idiomas</h3>
+            <ul>
+              <li>Português</li>
+              <li>Inglês</li>
+              <li>Espanhol</li>
+            </ul>
+          </article>
+          <article className="card">
+            <h3>Formação acadêmica</h3>
+            <ul>
+              <li>Graduação em Ciência da Computação</li>
+              <li>Pós-graduação em Inteligência Artificial</li>
+            </ul>
+          </article>
+        </div>
     </section>
   )
 }

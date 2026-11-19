@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa6';
+import { FaGithub, FaLinkedin, FaMicrosoft, FaWhatsapp } from 'react-icons/fa6';
 import { SiGmail } from 'react-icons/si';
 import { contacts } from '../data';
 import type { ContactName } from '../data';
@@ -9,6 +9,7 @@ const contactLogos: Record<ContactName, ReactNode> = {
   LinkedIn: <FaLinkedin className="contact-icon contact-icon-linkedin" aria-hidden="true" />,
   WhatsApp: <FaWhatsapp className="contact-icon contact-icon-whatsapp" aria-hidden="true" />,
   'E-mail': <SiGmail className="contact-icon contact-icon-gmail" aria-hidden="true" />,
+  'Microsoft Learn': <FaMicrosoft className="contact-icon contact-icon-microsoft-learn" aria-hidden="true" />,
 };
 
 export default function Contacts() {

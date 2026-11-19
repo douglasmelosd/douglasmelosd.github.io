@@ -21,8 +21,9 @@ export default function Parallel() {
                 ))}
             </div>
             {selectedParallel && (
-              <article className="card parallel-comparison" id="parallel-comparison" aria-live="polite">
+              <article key={selectedParallel.theme} className="card parallel-comparison" id="parallel-comparison" aria-live="polite">
                 <div className="parallel-comparison-copy">
+                  <h3>{selectedParallel.theme}</h3>
                   <p className="mut"><span className="who">Naruto</span>{selectedParallel.naruto}</p>
                   <p className="mut"><span className="who">Douglas</span>{selectedParallel.douglas}</p>
                 </div>

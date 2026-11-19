@@ -32,9 +32,16 @@ export default function Facets() {
       </div>
 
       {activeFacet ? (
-        <article className="henge-card facet-panel" aria-live="polite">
+        <article key={activeFacet.id} className="henge-card facet-panel" aria-live="polite">
           <p className="henge-label">Henge: {activeFacet.role}</p>
           <h3>{activeFacet.title}</h3>
+          {activeFacet.image && (
+            <img
+              src={activeFacet.image}
+              alt={`Representação da faceta ${activeFacet.role}`}
+              className="facet-image"
+            />
+          )}
           <p><strong>Histórico.</strong> {activeFacet.history}</p>
           <p><strong>Habilidades e técnicas.</strong> {activeFacet.skills}</p>
           <p><strong>Conquistas.</strong> {activeFacet.achievements}</p>
